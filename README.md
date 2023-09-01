@@ -1,2 +1,6 @@
-# HW7_BookStore
+## BookApp :
+* MVVM (Hilt)
+* Retrofit
+* Glide
+
  
