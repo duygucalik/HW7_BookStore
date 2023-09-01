@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.hw7_bookstore.ui.login.SplashScreenFragment"
+        android:label="SplashScreenFragment" >
+        <action
+            android:id="@+id/splashtobooks"
+            app:destination="@id/booksFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/booksFragment"
+        android:name="com.example.hw7_bookstore.ui.Books.BooksFragment"
+        android:label="BooksFragment" >
+        <action
+            android:id="@+id/bookstodetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.hw7_bookstore.ui.detail.DetailFragment"
+        android:label="DetailFragment">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>
